@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import './CallToAction.css'
 
@@ -22,9 +21,7 @@ function CallToAction({
       <div className="container cta__inner">
         <h2 className="cta__title">{title}</h2>
         <p className="cta__subtitle">{subtitle}</p>
-        <Link to={btnLink}>
-          <Button variant="secondary" size="lg">{btnLabel}</Button>
-        </Link>
+        <Button variant="secondary" size="lg" to={btnLink}>{btnLabel}</Button>
       </div>
     </section>
   )

@@ -66,7 +66,7 @@
   display: inline-block;
   padding: var(--space-2) var(--space-5);
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-white);
   border-radius: var(--radius);
   font-size: var(--text-sm);
   font-weight: 600;
@@ -82,9 +82,9 @@
   display: none;
   flex-direction: column;
   justify-content: center;
-  gap: 5px;
-  width: 40px;
-  height: 40px;
+  gap: var(--space-1);
+  width: var(--space-10);
+  height: var(--space-10);
   padding: var(--space-2);
   margin-left: auto;
   border-radius: var(--radius-sm);
@@ -93,7 +93,7 @@
   cursor: pointer;
 }
 
-.hamburger-line {
+.navbar__hamburger-line {
   display: block;
   width: 22px;
   height: 2px;

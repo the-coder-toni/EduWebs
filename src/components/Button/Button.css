@@ -8,7 +8,7 @@
   transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
   white-space: nowrap;
   cursor: pointer;
-  border: 2px solid transparent;
+  border: var(--border-width-md) solid transparent;
 }
 
 .btn:active {
@@ -34,7 +34,7 @@
 /* ---- Variants ---- */
 .btn--primary {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .btn--primary:hover:not(:disabled) {
@@ -44,11 +44,11 @@
 
 .btn--secondary {
   background-color: var(--color-secondary);
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .btn--secondary:hover:not(:disabled) {
-  background-color: #0891b2;
+  background-color: var(--color-secondary-dark);
   box-shadow: var(--shadow-md);
 }
 
@@ -60,7 +60,7 @@
 
 .btn--outline:hover:not(:disabled) {
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-white);
 }
 
 .btn:disabled {

@@ -4,6 +4,6 @@
 
 .features__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(var(--feature-card-min-width), 1fr));
   gap: var(--space-6);
 }

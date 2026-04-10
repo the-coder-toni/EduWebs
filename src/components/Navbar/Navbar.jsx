@@ -56,9 +56,9 @@ function Navbar() {
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(prev => !prev)}
         >
-          <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
-          <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
-          <span className={`hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`navbar__hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`navbar__hamburger-line ${menuOpen ? 'open' : ''}`}></span>
+          <span className={`navbar__hamburger-line ${menuOpen ? 'open' : ''}`}></span>
         </button>
       </div>
 

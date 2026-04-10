@@ -1,6 +1,6 @@
 .course-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--card-min-width), 1fr));
   gap: var(--space-6);
 }
 
@@ -13,6 +13,6 @@
 
 .course-list__empty span {
   display: block;
-  font-size: 3rem;
+  font-size: var(--text-5xl);
   margin-bottom: var(--space-4);
 }

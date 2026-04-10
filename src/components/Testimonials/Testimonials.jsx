@@ -1,6 +1,6 @@
+import './Testimonials.css'
 import TestimonialCard from '../TestimonialCard/TestimonialCard'
 import { testimonials } from '../../data/courses'
-import './Testimonials.css'
 
 /**
  * Testimonials — section displaying student reviews.

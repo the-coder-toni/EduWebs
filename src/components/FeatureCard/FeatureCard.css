@@ -8,7 +8,7 @@
 
 .feature-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
+  transform: translateY(var(--hover-lift));
 }
 
 .feature-card__icon {
@@ -19,7 +19,7 @@
 
 .feature-card__title {
   font-size: var(--text-lg);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   color: var(--color-text);
   margin-bottom: var(--space-2);
 }
@@ -27,5 +27,5 @@
 .feature-card__description {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
-  line-height: 1.7;
+  line-height: var(--leading-relaxed);
 }

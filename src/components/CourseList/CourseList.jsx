@@ -7,7 +7,7 @@ import './CourseList.css'
  * Props:
  *   courses — array of course objects to display
  */
-function CourseList({ courses }) {
+function CourseList({ courses = [] }) {
   if (courses.length === 0) {
     return (
       <div className="course-list__empty">

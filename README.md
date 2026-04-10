@@ -1,6 +1,6 @@
-# React + Vite
+# EduWeb — React 19 + Vite + React Router v7
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An educational web development course platform built with Vite, React 19, and React Router v7. Uses plain CSS with CSS custom properties to keep the code simple and readable for students.
 
 Currently, two official plugins are available:
 

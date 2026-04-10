@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import './Hero.css'
 
@@ -18,7 +17,7 @@ function Hero({
   subtitle = 'Expert-led courses on HTML, CSS, JavaScript, React, and more. Start learning for free today.',
   ctaLabel = 'Browse Courses',
   ctaLink = '/courses',
-  ctaLabel2 = 'Learn About Us',
+  ctaLabel2,
   ctaLink2 = '/about',
 }) {
   return (
@@ -30,13 +29,9 @@ function Hero({
           <p className="hero__subtitle">{subtitle}</p>
 
           <div className="hero__actions">
-            <Link to={ctaLink}>
-              <Button variant="primary" size="lg">{ctaLabel}</Button>
-            </Link>
+            <Button variant="primary" size="lg" to={ctaLink}>{ctaLabel}</Button>
             {ctaLabel2 && (
-              <Link to={ctaLink2}>
-                <Button variant="outline" size="lg">{ctaLabel2}</Button>
-              </Link>
+              <Button variant="outline" size="lg" to={ctaLink2}>{ctaLabel2}</Button>
             )}
           </div>
 
