@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
 
@@ -6,9 +6,22 @@ import './Navbar.css'
  * Navbar — top navigation bar
  * Uses NavLink so the active page link gets an "active" class automatically.
  * Includes a hamburger menu that toggles on mobile.
+ * Includes a dark/light mode toggle that persists to localStorage.
  */
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isDark, setIsDark] = useState(
+    () => {
+      const stored = localStorage.getItem('theme')
+      if (stored) return stored === 'dark'
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+    }
+  )
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+  }, [isDark])
 
   const navLinks = [
     { to: '/',        label: 'Home'    },
@@ -48,6 +61,15 @@ function Navbar() {
             Browse Courses
           </Link>
         </div>
+
+        {/* Dark mode toggle */}
+        <button
+          className="navbar__theme-toggle"
+          aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+          onClick={() => setIsDark(prev => !prev)}
+        >
+          {isDark ? '☀️' : '🌙'}
+        </button>
 
         {/* Hamburger (mobile) */}
         <button

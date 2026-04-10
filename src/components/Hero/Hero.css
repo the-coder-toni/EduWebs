@@ -123,6 +123,16 @@
   white-space: pre;
 }
 
+/* ---- Dark mode ---- */
+[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #1e1b4b 0%, #0c1a2e 50%, #0f2010 100%);
+}
+
+[data-theme="dark"] .hero__eyebrow {
+  background: #312e81;
+  color: #a5b4fc;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
   .hero__inner {
