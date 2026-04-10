@@ -1,0 +1,9 @@
+.features {
+  background-color: var(--color-surface-alt);
+}
+
+.features__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}

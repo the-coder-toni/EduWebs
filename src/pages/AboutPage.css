@@ -1,0 +1,83 @@
+.about-page__hero {
+  background: linear-gradient(135deg, #eef2ff 0%, #f0fdf4 100%);
+  padding-block: var(--space-16);
+}
+
+.about-page__title {
+  font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: var(--space-3);
+  letter-spacing: -0.02em;
+}
+
+.about-page__subtitle {
+  font-size: var(--text-xl);
+  color: var(--color-text-muted);
+  max-width: 520px;
+}
+
+/* ---- Mission ---- */
+.about-page__mission {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.about-page__mission-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.about-page__mission-text p {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.about-page__mission-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.about-page__stat {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-align: center;
+}
+
+.about-page__stat-value {
+  font-size: var(--text-3xl);
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.about-page__stat-label {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+/* ---- Instructors ---- */
+.about-page__instructors-section {
+  background-color: var(--color-surface-alt);
+}
+
+.about-page__instructors-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .about-page__mission {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,209 @@
+/* ---- Hero ---- */
+.course-detail__hero {
+  padding-block: var(--space-12);
+}
+
+.course-detail__hero-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.course-detail__breadcrumb {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.course-detail__breadcrumb a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.course-detail__title {
+  font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+  font-weight: 800;
+  color: var(--color-text);
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+  letter-spacing: -0.02em;
+}
+
+.course-detail__tagline {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+.course-detail__meta {
+  display: flex;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+.course-detail__price-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.course-detail__price {
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.course-detail__price--free {
+  color: #16a34a;
+}
+
+.course-detail__enroll-btn {
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: var(--radius);
+  font-size: var(--text-base);
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.course-detail__enroll-btn:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.course-detail__enroll-btn:active {
+  transform: scale(0.97);
+}
+
+.course-detail__hero-icon {
+  font-size: 6rem;
+  opacity: 0.8;
+}
+
+/* ---- Body layout ---- */
+.course-detail__body {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-10);
+  padding-block: var(--space-10);
+  align-items: start;
+}
+
+/* ---- Main column ---- */
+.course-detail__section {
+  margin-bottom: var(--space-10);
+}
+
+.course-detail__section-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.course-detail__description {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.course-detail__learn-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-3);
+}
+
+.course-detail__learn-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.course-detail__check {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ---- Sidebar ---- */
+.course-detail__sidebar-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-6));
+}
+
+.course-detail__sidebar-icon {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.course-detail__sidebar-title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.course-detail__sidebar-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-4);
+}
+
+.course-detail__sidebar-info li {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.course-detail__sidebar-info strong {
+  color: var(--color-text);
+}
+
+.price-free {
+  color: #16a34a;
+}
+
+.course-detail__enroll-btn--full {
+  width: 100%;
+  padding-block: var(--space-4);
+  font-size: var(--text-base);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .course-detail__body {
+    grid-template-columns: 1fr;
+  }
+
+  .course-detail__sidebar-card {
+    position: static;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-detail__hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .course-detail__hero-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius);
+  transition: background-color 0.15s;
+}
+
+.lesson-item:nth-child(even) {
+  background-color: var(--color-surface-alt);
+}
+
+.lesson-item:hover {
+  background-color: #e0e7ff;
+}
+
+.lesson-item__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-light);
+  color: #ffffff;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.lesson-item__title {
+  flex: 1;
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.lesson-item__duration {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}

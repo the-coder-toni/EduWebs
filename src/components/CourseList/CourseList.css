@@ -1,0 +1,18 @@
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-6);
+}
+
+.course-list__empty {
+  text-align: center;
+  padding: var(--space-20) var(--space-6);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+}
+
+.course-list__empty span {
+  display: block;
+  font-size: 3rem;
+  margin-bottom: var(--space-4);
+}
